@@ -36,7 +36,7 @@ module.exports = {
         unique : true
       }, 
       role : {
-        type : Sequelize.ENUM("hr", "finance", "employe"),
+        type : Sequelize.ENUM("hr", "finance", "employee"),
         allowNull : false
       },
       employee_nik : {
@@ -70,7 +70,7 @@ module.exports = {
         unique : true
       },
       employment_status : {
-        type : Sequelize.ENUM("Permanent", "Intern", "Resigned"),
+        type : Sequelize.ENUM("permanent", "intern", "resigned"),
         allowNull : false,
       }, 
       join_date : {
@@ -89,7 +89,7 @@ module.exports = {
         type : Sequelize.ENUM("Bank Mandiri", "Bank Central Asia", "Bank Nasional Indonesia", "Bank Rakyat Indonesia"),
         allowNull : false,
       },
-      bank_account_num : {
+      bank_account_number : {
         type : Sequelize.STRING(50),
         allowNull : false,
       },

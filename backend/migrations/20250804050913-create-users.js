@@ -17,34 +17,34 @@ module.exports = {
           model: "employees",
           key: "employee_id",
         },
-        email: {
-          type: Sequelize.STRING(50),
-          allowNull: false,
-          unique: true,
-        },
-        password: {
-          type: Sequelize.STRING(255),
-          allowNull: true,
-        },
-        role: {
-          type: Sequelize.ENUM("hr", "finance", "employee"),
-          allowNull: false,
-          defaultValue: null,
-        },
-        created_at: {
-          type: Sequelize.DATE,
-          allowNull: false,
-          defaultValue: Sequelize.literal("CURRENT_TIMESTAMP"),
-        },
-        updated_at: {
-          type: Sequelize.DATE,
-          allowNull: false,
-          defaultValue: Sequelize.literal("CURRENT_TIMESTAMP"),
-        },
-        deleted_at: {
-          type: Sequelize.DATE,
-          allowNull: true,
-        },
+      },
+      email: {
+        type: Sequelize.STRING(50),
+        allowNull: false,
+        unique: true,
+      },
+      password: {
+        type: Sequelize.STRING(255),
+        allowNull: true,
+      },
+      role: {
+        type: Sequelize.ENUM("hr", "finance", "employee"),
+        allowNull: true,
+        defaultValue: null,
+      },
+      created_at: {
+        type: Sequelize.DATE,
+        allowNull: false,
+        defaultValue: Sequelize.literal("CURRENT_TIMESTAMP"),
+      },
+      updated_at: {
+        type: Sequelize.DATE,
+        allowNull: false,
+        defaultValue: Sequelize.literal("CURRENT_TIMESTAMP"),
+      },
+      deleted_at: {
+        type: Sequelize.DATE,
+        allowNull: true,
       },
     });
   },

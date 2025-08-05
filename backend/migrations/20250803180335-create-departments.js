@@ -12,7 +12,7 @@ module.exports = {
       },
       department_name : {
         type : Sequelize.STRING(100),
-        allwoNull : false,
+        allowNull : false,
         unique : true
       },
        created_at: {

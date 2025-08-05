@@ -30,7 +30,7 @@ module.exports = {
         allowNull: false,
         defaultValue: 0,
       },
-      job_allownace: {
+      job_allowance: {
         type: Sequelize.DECIMAL(15, 0),
         allowNull: false,
         defaultValue: 0,

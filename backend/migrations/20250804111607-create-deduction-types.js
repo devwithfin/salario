@@ -3,7 +3,7 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable("deduction-types", {
+    await queryInterface.createTable("deduction_types", {
       deduction_id: {
         type: Sequelize.INTEGER,
         autoIncrement: true,
@@ -33,6 +33,6 @@ module.exports = {
   },
 
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable("deduction-types")
+    await queryInterface.dropTable("deduction_types")
   },
 };
