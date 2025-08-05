@@ -4,10 +4,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "concurrently \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\"",
     "docker:dev": "docker-compose up --build",
     "docker:stop": "docker-compose down",
-    "docker:restart": "docker-compose down && docker-compose up --build",
+    "docker:restart": "docker-compose down -v && docker-compose up --build",
     "docker:logs": "docker-compose logs -f --tail=100"
   },
   "repository": {
