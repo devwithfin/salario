@@ -4,13 +4,16 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start" : "node index.js",
-    "dev" : "nodemon index.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "migrate": "docker exec -it salario-backend npx sequelize-cli db:migrate",
+    "drop-migrate": "docker exec -it salario-backend npx sequelize-cli db:migrate:undo:all",
+    "seed": "docker exec -it salario-backend npx sequelize-cli db:seed:all",
+    "drop-seed": "docker exec -it salario-backend npx sequelize-cli db:seed:undo:all"
   },
   "author": "",
   "license": "ISC",
   "description": "",
-  
   "devDependencies": {
     "nodemon": "^3.1.10"
   },
